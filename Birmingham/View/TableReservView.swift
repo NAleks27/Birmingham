@@ -9,28 +9,48 @@ import SwiftUI
 
 
 struct Table: View {
-    
+    @State private var tapBtn = false
+   
     var text: Int
-    
+
     var body: some View {
         ZStack {
-            if text == 12 {
+            if text % 3 == 0 {
                 Button {
-                    // some code
+                    tapBtn.toggle()
                 } label: {
                     RoundedRectangle(cornerRadius: 50)
-                        .fill(.green)
+                        .fill(tapBtn ? .green : .brown)
                         .frame(width: 120, height: 60)
+                }
+                .onTapGesture {
+                    
                 }
             } else {
                 Button {
-                    // some code
+                    //code
                 } label: {
                     RoundedRectangle(cornerRadius: 50)
-                        .fill(text % 3 == 0 ? .brown : .gray)
+                        .fill(.gray)
                         .frame(width: 120, height: 60)
                 }
+                .disabled(true)
             }
+//
+//            Button {
+//                tapBtn.toggle()
+//            } label: {
+//                if text % 3 == 0 {
+//                    RoundedRectangle(cornerRadius: 50)
+//                        .fill(.gray)
+//                        .frame(width: 120, height: 60)
+//                } else {
+//                    RoundedRectangle(cornerRadius: 50)
+//                        .fill(color)
+//                        .frame(width: 120, height: 60)
+//                }
+//            }
+//            .disabled(text % 3 == 0 ? true : false)
             
             Text("Table \(text)")
                 .foregroundColor(.white)
@@ -38,11 +58,12 @@ struct Table: View {
     }
 }
 
+
 struct TableReservView: View {
-
-//    @State private var isPresenOrdered = false
-    @State private var numberOfTable = 12
-
+    @State private var tableNumber = 12
+    @State private var isPresenOrdered = false
+    @Environment(\.dismiss) var dismiss
+    
     let columns = [
         GridItem(.adaptive(minimum: 150))
     ]
@@ -78,6 +99,9 @@ struct TableReservView: View {
                     LazyVGrid(columns: columns) {
                         ForEach(1..<15) { number in
                             Table(text: number)
+                                .onTapGesture {
+                                    tableNumber = number
+                                }
                         }
                     }
                 }
@@ -85,21 +109,28 @@ struct TableReservView: View {
                 Spacer()
                 
                 Button {
-                    //some code
+                    isPresenOrdered.toggle()
                 } label: {
                     ZStack {
                         Rectangle()
                             .fill(.green)
                             .frame(height: 50)
                         
-                        Text("To order \"Table №12\"")
+                        Text("To order \"Table №\(tableNumber)\"")
                             .foregroundColor(.white)
                     }
+                }
+                .alert("Ordered \"Table\"\(tableNumber)", isPresented: $isPresenOrdered) {
+                    Button("OK", role: .cancel, action: cancel)
                 }
             }
             .navigationTitle("TABLE RESERV")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    func cancel() {
+        dismiss()
     }
 }
 
