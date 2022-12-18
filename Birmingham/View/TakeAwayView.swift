@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TakeAwayView: View {
     
+    @State private var isPresentGoToOrderView = false
+    
     let menuSections = ["NEW", "POPULAR", "All menu", "Main dishes", "First dishes", "Salads", "Desserts", "Hot drinks", "Cold drinks"]
     
     var body: some View {
@@ -34,7 +36,7 @@ struct TakeAwayView: View {
                 }
                 
                 Button {
-                    
+                    isPresentGoToOrderView.toggle()
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 50)
@@ -61,7 +63,9 @@ struct TakeAwayView: View {
                         }
                     }
                 }
-                
+                .sheet(isPresented: $isPresentGoToOrderView) {
+                    GoToOrderView()
+                }
                 
             }
             .foregroundColor(.brown)

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct Main: View {
+    
     @State private var isPresentHistory = false
+    
     
     var body: some View {
         NavigationView {

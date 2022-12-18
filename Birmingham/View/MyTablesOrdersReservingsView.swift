@@ -54,6 +54,27 @@ struct MyTablesOrdersReservingsView: View {
                         }
                         .sheet(isPresented: $isPresentDetailView) {
 //                            DetailView()
+                            Text("DetaiView")
+                        }
+                    }
+                } else if pickerChoice == "Archive" {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.gray)
+                            .frame(width: 350, height: 100)
+                        
+                        HStack (spacing: 30) {
+                            Text("Order")               // text
+                                .foregroundColor(.white)
+                                .font(.title)
+                            
+                            
+                            VStack (alignment: .leading) {
+                                Text("Date: 15.12.2022")
+                                Text("Check sum:\n450 uah")
+                                    .multilineTextAlignment(.leading)
+                            }
+                            .foregroundColor(.white)
                         }
                     }
                 }

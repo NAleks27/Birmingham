@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct RectangleButton: View {
     var text: String
     var subtext: String?
     var view: String
+    
+    let coordinate = CLLocationCoordinate2D(latitude: 50.418_66, longitude: 30.489_23)
     
     var body: some View {
         NavigationLink {
@@ -18,7 +21,7 @@ struct RectangleButton: View {
             case "TableReservView": TableReservView()
             case "TakeAwayView": TakeAwayView()
             case "QR": TakeAwayView()
-            case "Contacts": TakeAwayView()
+            case "Contacts": ContactsView(coordinate: coordinate)
             default: Main()
             }
         } label: {

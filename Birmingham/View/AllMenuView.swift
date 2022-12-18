@@ -9,18 +9,12 @@ import SwiftUI
 
 struct AllMenuView: View {
    
-    let dishTest = Dish(
-        name: "Caesar",
-        image: "caesar",
-        description: "Tasty salad. Tasty salad. Tasty salad. Tasty salad. Tasty salad. Tasty salad. Tasty salad. Tasty salad. Tasty salad.",
-        price: 150,
-        likes: 220)
-    
+    var allMenuArray = [Dish]()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                DishView()
+                DishView(dishh: Dish(name: "Caesar", image: "salad1", description: "Something", price: 150))
                 Spacer()
             }
             .navigationTitle("ALL MENU")

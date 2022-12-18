@@ -19,6 +19,9 @@
 		5B247491294E016F00978AD6 /* AllMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B247490294E016F00978AD6 /* AllMenuView.swift */; };
 		5B247493294E019000978AD6 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B247492294E019000978AD6 /* Dish.swift */; };
 		5B247498294E02F900978AD6 /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B247497294E02F900978AD6 /* DishView.swift */; };
+		5B24749A294E8AA600978AD6 /* GoToOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B247499294E8AA600978AD6 /* GoToOrderView.swift */; };
+		5B24749C294E971100978AD6 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24749B294E971100978AD6 /* ContactsView.swift */; };
+		5B24749E294E9E5100978AD6 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B24749D294E9E5100978AD6 /* Contacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		5B247490294E016F00978AD6 /* AllMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMenuView.swift; sourceTree = "<group>"; };
 		5B247492294E019000978AD6 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		5B247497294E02F900978AD6 /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
+		5B247499294E8AA600978AD6 /* GoToOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToOrderView.swift; sourceTree = "<group>"; };
+		5B24749B294E971100978AD6 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		5B24749D294E9E5100978AD6 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 				5B24748C294CF08500978AD6 /* TableReservView.swift */,
 				5B24748E294DF0B000978AD6 /* TakeAwayView.swift */,
 				5B247490294E016F00978AD6 /* AllMenuView.swift */,
+				5B247499294E8AA600978AD6 /* GoToOrderView.swift */,
+				5B24749B294E971100978AD6 /* ContactsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				5B247492294E019000978AD6 /* Dish.swift */,
+				5B24749D294E9E5100978AD6 /* Contacts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,12 +197,15 @@
 				5B24748F294DF0B000978AD6 /* TakeAwayView.swift in Sources */,
 				5B247487294CC3BC00978AD6 /* Main.swift in Sources */,
 				5B247489294CCC5400978AD6 /* RectangleButton.swift in Sources */,
+				5B24749C294E971100978AD6 /* ContactsView.swift in Sources */,
 				5B24748B294CD9F200978AD6 /* MyTablesOrdersReservingsView.swift in Sources */,
 				5B24747B294CC38700978AD6 /* ContentView.swift in Sources */,
 				5B247491294E016F00978AD6 /* AllMenuView.swift in Sources */,
 				5B247498294E02F900978AD6 /* DishView.swift in Sources */,
+				5B24749E294E9E5100978AD6 /* Contacts.swift in Sources */,
 				5B247493294E019000978AD6 /* Dish.swift in Sources */,
 				5B247479294CC38700978AD6 /* BirminghamApp.swift in Sources */,
+				5B24749A294E8AA600978AD6 /* GoToOrderView.swift in Sources */,
 				5B24748D294CF08500978AD6 /* TableReservView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
