@@ -31,7 +31,7 @@ struct RectangleButton: View {
                     .frame(width: 155, height: 155)
                 
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(.brown).brightness(-0.1)
+                    .fill(.brown).brightness(-0.3)
                     .frame(width: 150, height: 150)
                     
                 

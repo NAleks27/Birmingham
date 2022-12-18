@@ -11,7 +11,6 @@ struct Main: View {
     
     @State private var isPresentHistory = false
     
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -21,7 +20,7 @@ struct Main: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.brown).brightness(-0.3)
-                            .frame(width: 330, height: 50)
+                            .frame(width: 340, height: 50)
                         
                         Text("My tables, orders, reservations")
                             .foregroundColor(.white)
@@ -29,9 +28,7 @@ struct Main: View {
                     }
                 }
                 
-                
-                Spacer()
-                
+                Divider()
                 
                 HStack(spacing: 30) {
                     RectangleButton(text: "Table\nreserv", view: "TableReservView")
@@ -43,8 +40,6 @@ struct Main: View {
                     RectangleButton(text: "Contacts", view: "Contacts")
                 }
                 
-                Spacer()
-                Spacer()
                 Spacer()
                 
                 HStack (spacing: 15) {
