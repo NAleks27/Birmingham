@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "xsteik-svynnyy-nizhnyy-01-600x600.jpg.pagespeed.ic.d2vgRCB8tc.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
